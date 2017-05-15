@@ -1,0 +1,23 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Messaage</h1>
+    </header>
+  <form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new Message" />
+      </form>
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="task">  
+  <li>
+    <span>
+     {{text}}
+    </span><button class="delete">&times;</button>
+  </li>
+</template>
